@@ -1,0 +1,71 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+		title NiceAir
+		link(rel='stylesheet' href='bower_components/jquery.mobile/jquery.mobile-1.4.5.min.css')
+		link(rel='stylesheet' href='css/home.css')
+		script(src='bower_components/jquery/dist/jquery.min.js')
+		script(src='bower_components/jquery.mobile/jquery.mobile-1.4.5.min.js')
+		script(src='js/home.js')
+
+	body
+		#home(data-role='page')
+			div(data-role="header")
+				a(href="#panel" class="ui-btn ui-shadow ui-btn-icon-left ui-icon-bullets") &nbsp;
+
+			.ui-content(role='main')
+				.center.place
+					.building 月牙楼
+					.room 403 B教室
+				.center.circle
+					p.text 78
+				.center.suggest
+					p 最好开窗通风哦！
+
+				.center.bar
+					.co2
+					.harmful
+					.smoke
+					.line
+
+		#panel(data-role="panel" data-theme="b" data-display="overlay")
+			ul(data-role="listview")
+				li
+					p(id="logoBar")
+						span NiceAir
+				li(data-icon="bars")
+					a(href="#list") 收藏夹
+				li(data-icon="calendar")
+					a(href="#search") 搜索
+				li(data-icon="clock")
+					a(href="#plan") 校园概览
+				li(data-icon="false")
+					a(href="#about") 空气差时提醒我
+						input(type="checkbox" data-role="flipswitch" name="flip-checkbox-1" id="flip-checkbox-1" data-mini="true")
+
+		#search(data-role='page', data-theme='a')
+			div(data-role="header")
+				a(href="#panel" class="ui-btn ui-shadow ui-btn-icon-left ui-icon-bullets") &nbsp;
+
+			.ui-content(role='main')
+				.center.title 搜 索
+				.center.require
+					p
+						a(href="#searching") 离我最近且空气较好
+					p
+						a(href="#searching") 离我最近且空气较好
+				.line2
+				.center.require
+					p
+						a(href="#searching") 请输入地点位置
+
+		#searching(data-role='page')
+			div(data-role="header")
+				a(href="#panel" class="ui-btn ui-shadow ui-btn-icon-left ui-icon-bullets") &nbsp;
+
+			.ui-content(role='main')
+				.stub
+				.center.circles
+				.center.stub2 正在搜索符合要求的地方
