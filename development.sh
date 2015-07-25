@@ -1,6 +1,6 @@
 #!/bin/bash
-coffee --join js/home.js --watch --compile js/home.coffee&
+coffee --join static/js/home.js --watch --compile static/js/home.coffee&
 
-jade -w -P *.jade&
+jade -w -P view/*.jade&
 
 echo "The development environment has ready!"
