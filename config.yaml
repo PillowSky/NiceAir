@@ -1,0 +1,6 @@
+name: 3doors
+version: 2
+
+handlers:
+- url: /
+  static_path: /

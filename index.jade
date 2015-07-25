@@ -8,27 +8,25 @@ html
 		link(rel='stylesheet' href='css/home.css')
 		script(src='bower_components/jquery/dist/jquery.min.js')
 		script(src='bower_components/jquery.mobile/jquery.mobile-1.4.5.min.js')
+		script(src='bower_components/Chart.js/Chart.min.js')
 		script(src='js/home.js')
 
 	body
+		video.bgmovie(src="mp4/bad.mp4" autoplay loop)
 		#home(data-role='page')
-			div(data-role="header")
-				a(href="#panel" class="ui-btn ui-shadow ui-btn-icon-left ui-icon-bullets") &nbsp;
-
+			a(href="#panel")
+				img.listicon(src='img/list.png')
 			.ui-content(role='main')
-				.center.place
+				.center.place.text
 					.building 月牙楼
 					.room 403 B教室
 				.center.circle
-					p.text 78
+				p.center.score 78
 				.center.suggest
-					p 最好开窗通风哦！
+					p.text 最好开窗通风哦！
 
-				.center.bar
-					.co2
-					.harmful
-					.smoke
-					.line
+				#statWrapper.center
+					canvas#stat
 
 		#panel(data-role="panel" data-theme="b" data-display="overlay")
 			ul(data-role="listview")
@@ -46,26 +44,26 @@ html
 						input(type="checkbox" data-role="flipswitch" name="flip-checkbox-1" id="flip-checkbox-1" data-mini="true")
 
 		#search(data-role='page', data-theme='a')
-			div(data-role="header")
-				a(href="#panel" class="ui-btn ui-shadow ui-btn-icon-left ui-icon-bullets") &nbsp;
+			a(href="#panel")
+				img.listicon(src='img/list.png')
 
 			.ui-content(role='main')
 				.center.title 搜 索
 				.center.require
 					p
-						a(href="#searching") 离我最近且空气较好
+						a(href="#searching").text 离我最近且空气较好
 					p
-						a(href="#searching") 离我最近且空气较好
+						a(href="#searching").text 离我最近且空气较好
 				.line2
 				.center.require
 					p
-						a(href="#searching") 请输入地点位置
+						a(href="#searching").text 请输入地点位置
 
 		#searching(data-role='page')
-			div(data-role="header")
-				a(href="#panel" class="ui-btn ui-shadow ui-btn-icon-left ui-icon-bullets") &nbsp;
+			a(href="#panel")
+				img.listicon(src='img/list.png')
 
 			.ui-content(role='main')
 				.stub
 				.center.circles
-				.center.stub2 正在搜索符合要求的地方
+				.center.stub2.text 正在搜索符合要求的地方
