@@ -6,8 +6,8 @@ $ ->
 		labels : ["二氧化碳","有害气体","烟雾"],
 		datasets : [
 			{
-				fillColor : "rgba(151,187,205,0.5)",
-				strokeColor : "rgba(151,187,205,1)",
+				fillColor : "rgba(148,235,225,0.5)",
+				strokeColor : "rgba(148,235,225,1)",
 				data : [65, 48, 32]
 			}
 		]
